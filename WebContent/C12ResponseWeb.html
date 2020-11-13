@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+
+    <style type="text/css">
+        /* 전체선택자를 통해 문서의 기본스타일 지정 */
+        *{margin: 0; padding: 0; font-family: verdana;}
+       
+        /* 
+        block 엘리먼트 자체에 대한 가운데 정렬을 위해 margin을 사용한다.
+        적용되지 않는 브라우저가 있다면 text-align을 통해 정렬한다.
+        */
+        #AllWrap
+        {
+            margin: 0 auto; text-align: center;
+        }
+        #PartWrap
+        {
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+        #header
+        {
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+        /* 
+        li태그의 기본 블릿을 제거한다.
+        overflow의 속성
+            - visible : 컨텐츠가 박스를 넘어가도 보이게 처리
+            - hidden : 박스를 벗어난 부분은 숨김처리
+            - scroll : 컨텐츠의 크기와 상관없이 스크롤바 생김
+            - auto : 컨텐츠의 크기에 따라 스크롤바가 토글됨
+        */
+        #nav ul
+        {
+            list-style: none;
+            overflow: hidden;
+        }
+        #nav ul li
+        {
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px; box-sizing: border-box;
+            /* 전체 넓이에 패딩과 보더를 포함하여 지정한다 */
+            /* box-sizing: border-box; => 강제적으로 사이즈 맞춘다
+                ex) 큰박스 100, 작은박스20 *5 이면 보더사이즈까지 하면 100이 넘는다(110?)
+                그걸 맞추기 위해서 box-sizing: border-box;를 사용하는 것이다!
+            */
+        }
+
+        #ContentWrap #content > h2
+        {
+            border-bottom: 1px #808080 solid;
+            font-size: 2em;
+        }
+        #content
+        {
+            padding: 20px;
+        }
+        #footer
+        {
+            font-size: 2em; font-weight: bold; height: 100px;
+            line-height: 100px; text-align: center; border: 1px solid blue;
+        }
+
+        /* 
+            반응형웹을 구현하기 위해 미디어쿼리를 사용한다.
+            디바이스(단말기)의 해상도에 따라 다른 형태의 화면을 보여준다.
+            이런 경우 모바일용 웹화면을 별도로 제작하지 않아도 된다.
+        */
+        /* 스크린의 크기가 640이하일 때의 화면설정 */
+        @media screen and (max-width:640px)
+        {
+            #AllWrap{ width: 100%; }
+            #content p
+            {
+                font-size: 2em; color: black;
+            }
+        }
+        /* 스크린의 크기가 641 ~ 999일 때의 화면설정 */
+        @media screen and (min-width: 641px) and (max-width: 999px)
+        {
+            #AllWrap{ width: 100%; }
+            #content p
+            {
+                font-size: 1.5em; color: red;
+                background-color: black;
+            }
+        }
+        /* 스크린의 크기가 1000이상일 때의 화면설정 */
+        @media screen and (min-width: 1000px)
+        {
+            #AllWrap{ width: 80%; }
+            #content p
+            {
+                font-size: 1em; color: green;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContentWrap">
+            <div id="content">
+                <h2>1주간 일평균확진 99.7명</h2>
+                <p>
+                    (서울=연합뉴스) 신선미 김서영 기자<br>
+                    최근 1주간 국내 일평균 신종 코로나바이러스 감염증(코로나19)
+                    확진자 수가 100명에 육박한 것을 두고, 정부는 현 추세가 이어진다면
+                    2∼3주내 거리두기 단계를 높일 수 있다고 진단했다<br>
+                    손영래 중앙사고수습본부(중수본) 전략기획반장은
+                    11일 정부세종청사에서 열린 정례 브리핑에서
+                    "오늘 0시 기준으로 지난 1주간 국내 하루 평균 환자는 하루 99.7명" 이라고 말했다.
+                    손 반장은 "수도권은 67.0명, 충청권은 13.6명, 경남권은 7.6명,
+                    강원권은 6.1명 등이며 그 외 권역은 3명 이하 수준"이라면서
+                    "최근 코로나19 환자가 조금씩 꾸준히 증가하고 있다"고 설명했다<br>
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-치영</title>
+
+    <script>
+
+        var num;
+        document.write("<h2>변수초기화전</h2>");
+        document.write("num의 자료형:"+ typeof(num) +", num에 저장된 데이터:"+ num);
+
+        num = 100;
+        document.write("<h2>변수 초기화 후</h2>")
+        document.write("num의 자료형:"+ typeof(num) +", num에 저장된 데이터:"+ num);
+
+        num = '문자열입니다';
+        document.write("<br>num의 자료형:"+ typeof(num) +", num에 저장된 데이터:"+ num);
+
+        num = true;
+        document.write("<br>num의 자료형:"+ typeof(num) +", num에 저장된 데이터:"+ num);
+    
+        document.write("<h2>산술연산자</h2>");
+        document.write("(3 % 5 * 2 + 10 / 5)=" + (3 % 5 * 2 + 10 / 5));
+        document.write("<br>3 / 5="+ (3/5));
+    
+        if (-1) 
+        {
+            document.write("<br>-1은 true이다");    
+        } 
+        else 
+        {
+            document.write("<br>-1은 false이다");
+        }
+
+        if(10-10) //0값은 false다
+        {
+            document.write("<br>10-10은 true이다");
+        }
+        else
+        {
+            document.write("<br>10-10은 false이다");
+        }
+
+        if(false==null)
+        {
+            document.write("<br>true이다.")
+        }
+        else
+        {
+            document.write("<br>false이다.")
+        }
+
+        
+        for(var i=0 ; i<5 ; i++)
+        {
+            var varInFor=100;
+            document.write('i='+i+"<br>");
+        }
+        document.write("for문이 끝난 후 i의 값 :"+ i +"<br>");
+        document.write("for문 안에서 선언한 변수 varInFor : "+ varInFor);
+    
+
+        document.write("<h2>이중 for문을 통한 출력</h2>");
+        for(var i=1 ; i<=5 ; i++)
+        {
+            for(var j=1 ; j<=5 ; j++)
+            {
+                if(i==j)
+                {
+                    document.write("1&nbsp;");
+                }
+                else
+                {
+                    document.write("0&nbsp;");
+                }
+            }
+            document.write("<br/>");
+        }
+            
+
+    </script>
+
+</head>
+
+<body>
+    
+
+</body>
+
+</html>
