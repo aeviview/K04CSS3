@@ -4,8 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator2.html</title>
-</head>
-<body>
+    <!-- 11/18일 다시 만들어봄 -->
+    <!-- 코딩 길이는 길어졌지만 HTML 구역과 CSS 구역을 나눠서 작성함^^ -->
+    <style>
+        
+        * 
+        { 
+            text-align: center; font-weight: bold; color: white;       
+        }
+
+        h2 { color: black; }
     
+        table 
+        { 
+            width: 400px; height: 450px; border-radius: 10px;
+            border: 1px solid #dddddd; background-color: #dddddd;
+        }
+
+        #display 
+        { 
+            font-size: 40px; text-align: right; background-color:#70C738;
+            border-radius: 10px; padding: 10px; color: #373737;
+        }
+
+        .cancel
+        {
+            background-color: #7B7B7B; width: 205px;
+            border-radius: 10px; padding: 15px; padding-top: 20px;
+            font-size: 20px; border:1px solid #dddddd;
+        }
+
+        .button
+        {
+            background-color: #373737; width: 100px;
+            border-radius: 10px; padding: 15px;
+            font-size: 20px; border: 1px solid #dddddd;
+        }
+
+        .button2
+        {
+            background-color: #FA960A; width: 100px;
+            border-radius: 10px; padding: 15px;
+            font-size: 20px; border: 1px solid #dddddd;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h2>계산기</h2>
+
+    <table align="center">
+    <!--이걸 center로 해줘야지 "계산기"가 가운데 고정됨!-->
+        
+        <!-- 디스플레이창 -->
+        <tr> 
+            <td colspan="4">
+                <div id="display">123+654</div>
+            </td>
+        </tr>
+        
+        <!-- Backspace, clear버튼 -->
+        <tr>
+            <td colspan="2">
+                <button class="cancel" onclick="backSpace();">
+                    BackSpace
+                </button>              
+            </td>
+            <td colspan="2">
+                <button class="cancel" onclick="clear();">
+                    C
+                </button>
+            </td>
+        </tr>
+        
+        <!-- 
+            숫자버튼과 연산부호버튼!
+            둘이 바탕색이 다르기 때문에 클래스를 두개로 나눴다
+        -->
+        <tr>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    1
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    2
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    3
+                </button>
+            </td>
+            <td>
+                <button class="button2" onclick="inputNum();">
+                    /
+                </button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    4
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    5
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    6
+                </button>
+            </td>
+            <td>
+                <button class="button2" onclick="inputNum();">
+                    X
+                </button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    7
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    8
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    9
+                </button>
+            </td>
+            <td>
+                <button class="button2" onclick="inputNum();">
+                    +
+                </button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    =
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    0
+                </button>
+            </td>
+            <td>
+                <button class="button" onclick="inputNum();">
+                    .
+                </button>
+            </td>
+            <td>
+                <button class="button2" onclick="inputNum();">
+                    -
+                </button>
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
